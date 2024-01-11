@@ -1,0 +1,20 @@
+server:
+  port: 9000
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri:  https://github.com/saiyanrose/Remote-Config-Service
+          username: saiyanrose
+          password: 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
+          search-paths:
+          - product-microservice-config,category-microservice-config
+management: 
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: "always"          
